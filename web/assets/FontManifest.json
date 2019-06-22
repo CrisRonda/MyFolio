@@ -1,0 +1,26 @@
+[
+    {
+        "family": "Viga",
+        "fonts": [
+            {
+                "asset": "fonts/Viga-Regular.ttf"
+            }
+        ]
+    },
+    {
+        "family": "Lobster",
+        "fonts": [
+            {
+                "asset": "fonts/Lobster-Regular.ttf"
+            }
+        ]
+    },
+    {
+        "family": "Git",
+        "fonts": [
+            {
+                "asset": "fonts/git.ttf"
+            }
+        ]
+    }
+]

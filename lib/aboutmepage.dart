@@ -31,7 +31,14 @@ class _AboutMeState extends State<AboutMePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           ResponsiveLayout.isSmallScreen(context)
-                              ? Column(children: <Widget>[ImageProfile(),SizedBox(height: 50,)],)
+                              ? Column(
+                                  children: <Widget>[
+                                    ImageProfile(),
+                                    SizedBox(
+                                      height: 50,
+                                    )
+                                  ],
+                                )
                               : Container(),
                           titleText("Hola!"),
                           titleText('Mi nombre es \nCristian Ronda'),
@@ -62,15 +69,12 @@ class _AboutMeState extends State<AboutMePage> {
                                   height: 30.0,
                                   width: 125.0,
                                   child: MaterialButton(
-                                    onPressed: () {
-                                      js.context.callMethod("open", [wsp]);
-                                    },
-                                    color: Colors.lightGreen,
-                                    textColor: Colors.white,
-                                    child: Center(
-                                      child: messageText("Escríbeme"),
-                                    ),
-                                  ),
+                                      onPressed: () {
+                                        js.context.callMethod("open", [wsp]);
+                                      },
+                                      color: Colors.lightGreen,
+                                      textColor: Colors.white,
+                                      child: messageText("Escríbeme")),
                                 ),
                                 SizedBox(
                                   height: 10,
@@ -101,7 +105,9 @@ class _AboutMeState extends State<AboutMePage> {
                         : SizedBox(
                             width: MediaQuery.of(context).size.width * 0.05),
                     ResponsiveLayout.isSmallScreen(context)
-                        ? Container(width: 0,)
+                        ? Container(
+                            width: 0,
+                          )
                         : new ImageProfile(),
                     ResponsiveLayout.isMediumScreen(context)
                         ? SizedBox(
@@ -165,9 +171,11 @@ class ImageProfile extends StatelessWidget {
 
     return Stack(children: [
       Container(
-          color: Colors.blue,
+          // color: Colors.blue,
           width: witdhScreen(),
-          child: Image.network("assets/perfil.jpg", fit: BoxFit.cover)),
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(witdhScreen()*0.40),
+              child: Image.network("assets/perfil.jpg", fit: BoxFit.cover)))
     ]);
   }
 }

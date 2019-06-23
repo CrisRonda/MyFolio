@@ -153,21 +153,18 @@ class Studies extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'Viga',
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
                   ),
                   Text(
                     "Quito - Ecuador",
                     style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Viga',
-                    ),
+                        color: Colors.black, fontFamily: 'Viga', fontSize: 18),
                   ),
                   Text(
                     year,
                     style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Viga',
-                    ),
+                        color: Colors.black, fontFamily: 'Viga', fontSize: 12),
                   ),
                 ],
               ),
@@ -193,26 +190,21 @@ class Studies extends StatelessWidget {
     if (ResponsiveLayout.isSmallScreen(context)) {
       return Column(
         children: <Widget>[
-          Text(
-            title,
-            style: TextStyle(
-                color: Colors.black,
-                fontFamily: 'Viga',
-                fontWeight: FontWeight.bold),
-          ),
+          Text(title,
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Viga',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20)),
           Text(
             "Quito - Ecuador",
             style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'Viga',
-            ),
+                color: Colors.black, fontFamily: 'Viga', fontSize: 12),
           ),
           Text(
             year,
             style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'Viga',
-            ),
+                color: Colors.black, fontFamily: 'Viga', fontSize: 15),
           ),
           textWidgets(lista),
           SizedBox(width: widthScreen * 0.01),
@@ -239,21 +231,22 @@ class Studies extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Viga',
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
                     ),
                     Text(
                       "Quito - Ecuador",
                       style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Viga',
-                      ),
+                          color: Colors.black,
+                          fontFamily: 'Viga',
+                          fontSize: 15),
                     ),
                     Text(
                       year,
                       style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Viga',
-                      ),
+                          color: Colors.black,
+                          fontFamily: 'Viga',
+                          fontSize: 12),
                     ),
                   ],
                 ),
@@ -281,10 +274,8 @@ class Studies extends StatelessWidget {
       list.add(
         Text(
           strings[i],
-          style: TextStyle(
-            color: Colors.black,
-            fontFamily: 'Viga',
-          ),
+          style:
+              TextStyle(color: Colors.black, fontFamily: 'Viga', fontSize: 18),
         ),
       );
     }

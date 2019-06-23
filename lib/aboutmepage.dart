@@ -31,9 +31,7 @@ class _AboutMeState extends State<AboutMePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           ResponsiveLayout.isSmallScreen(context)
-                              ? Center(
-                                  child: ImageProfile(),
-                                )
+                              ? Column(children: <Widget>[ImageProfile(),SizedBox(height: 50,)],)
                               : Container(),
                           titleText("Hola!"),
                           titleText('Mi nombre es \nCristian Ronda'),
@@ -49,7 +47,7 @@ class _AboutMeState extends State<AboutMePage> {
                           ),
                           SizedBox(height: 50.0),
                           Text(
-                            'Aprender a toda hora',
+                            'Aprendiendo a toda hora',
                             style: TextStyle(
                                 fontSize: 22.0,
                                 fontWeight: FontWeight.bold,
@@ -103,7 +101,7 @@ class _AboutMeState extends State<AboutMePage> {
                         : SizedBox(
                             width: MediaQuery.of(context).size.width * 0.05),
                     ResponsiveLayout.isSmallScreen(context)
-                        ? Container()
+                        ? Container(width: 0,)
                         : new ImageProfile(),
                     ResponsiveLayout.isMediumScreen(context)
                         ? SizedBox(
@@ -170,19 +168,6 @@ class ImageProfile extends StatelessWidget {
           color: Colors.blue,
           width: witdhScreen(),
           child: Image.network("assets/perfil.jpg", fit: BoxFit.cover)),
-      Positioned(
-        bottom: 0.0,
-        child: Container(
-            color: Colors.black,
-            height: 30.0,
-            width: witdhScreen() * .7,
-            child: Center(
-              child: Text(
-                'Más',
-                style: TextStyle(color: Colors.white),
-              ),
-            )),
-      ),
     ]);
   }
 }

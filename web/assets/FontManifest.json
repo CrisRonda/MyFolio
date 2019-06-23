@@ -16,10 +16,18 @@
         ]
     },
     {
-        "family": "Git",
+        "family": "MaterialIcons",
         "fonts": [
             {
-                "asset": "fonts/git.ttf"
+                "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+            }
+        ]
+    },
+    {
+        "family": "social",
+        "fonts": [
+            {
+                "asset": "git.ttf"
             }
         ]
     }

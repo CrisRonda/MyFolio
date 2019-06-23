@@ -3,6 +3,7 @@ import 'package:hello_world/aboutmepage.dart';
 import 'package:hello_world/files_page.dart';
 import './studies.dart';
 import './responsivelayout.dart';
+import './me.dart';
 
 void main() => runApp(MyApp());
 
@@ -50,15 +51,15 @@ class _MyHomePageState extends State<MyHomePage>
                     Text(
                       "Cristian Ronda",
                       style: TextStyle(
-                          color: Colors.blueAccent,
+                          color: Colors.black,
                           fontFamily: 'Viga',
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "Desarrollador de Software",
                       style: TextStyle(
-                          color: Colors.blueAccent,
-                          fontFamily: "Lobster",
+                          color: Colors.black,
+                          fontFamily: "Viga",
                           fontWeight: FontWeight.bold),
                     )
                   ],
@@ -87,8 +88,8 @@ class _MyHomePageState extends State<MyHomePage>
                           child: Text(
                             'Home',
                             style: TextStyle(
-                                fontSize: 17,
-                                fontFamily: 'Lobster',
+                                fontSize: 12,
+                                fontFamily: 'Viga',
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -96,8 +97,8 @@ class _MyHomePageState extends State<MyHomePage>
                           child: Text(
                             'Sobre Mí',
                             style: TextStyle(
-                                fontSize: 17,
-                                fontFamily: 'Lobster',
+                                fontSize: 12,
+                                fontFamily: 'Viga',
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -105,8 +106,8 @@ class _MyHomePageState extends State<MyHomePage>
                           child: Text(
                             'Mis estudios',
                             style: TextStyle(
-                                fontSize: 17,
-                                fontFamily: 'Lobster',
+                                fontSize: 12,
+                                fontFamily: 'Viga',
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -114,8 +115,8 @@ class _MyHomePageState extends State<MyHomePage>
                           child: Text(
                             'Mis trabajos',
                             style: TextStyle(
-                                fontSize: 17,
-                                fontFamily: 'Lobster',
+                                fontSize: 12,
+                                fontFamily: 'Viga',
                                 fontWeight: FontWeight.bold),
                           ),
                         )
@@ -130,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage>
               controller: tabController,
               children: <Widget>[
                 AboutMePage(),
-                AboutMePage(),
+                Me(),
                 Studies(),
                 Files()
               ],

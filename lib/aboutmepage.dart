@@ -173,8 +173,8 @@ class ImageProfile extends StatelessWidget {
       Container(
           // color: Colors.blue,
           width: witdhScreen(),
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(witdhScreen()*0.40),
+          height: witdhScreen(),
+          child: ClipOval(
               child: Image.network("assets/perfil.jpg", fit: BoxFit.cover)))
     ]);
   }

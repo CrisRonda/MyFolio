@@ -59,53 +59,79 @@ class Me extends StatelessWidget {
           separator,
           textTitle("REDES"),
           spacer(25),
-          ResponsiveLayout.isSmallScreen(context) ?
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              materialButtonCircular('https://www.facebook.com/cristian.ronda2',Icon(Icons.face,size: widthScreen*0.05, color: Colors.white,),Colors.blue),
-              spacerWidth(widthScreen, true),              
-              materialButtonCircular('https://github.com/CrisRonda',Icon(Icons.android,size: widthScreen*0.05, color: Colors.white,),Colors.black),
-              spacerWidth(widthScreen, true),              
-              materialButtonCircular('https://www.instagram.com/cristian.ronda1/?hl=es-la',Icon(Icons.camera_roll,size: widthScreen*0.05, color: Colors.white,),Colors.purple),
-              spacerWidth(widthScreen, true),              
-              materialButtonCircular('https://twitter.com/CristianRonda3',Icon(Icons.new_releases,size: widthScreen*0.05, color: Colors.white,),Colors.blueGrey),
-              spacerWidth(widthScreen, true),              
-              materialButtonCircular('https://www.linkedin.com/in/cristian-ronda-169414180/',Icon(Icons.bookmark_border,size: widthScreen*0.05, color: Colors.white,),Colors.cyanAccent),
-              spacerWidth(widthScreen, true),              
-            ],
-          ):
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              materialButtonCircular('https://www.facebook.com/cristian.ronda2',Icon(Icons.face,size: widthScreen*0.05, color: Colors.white,),Colors.blue),
-              spacerWidth(widthScreen, false),
-              materialButtonCircular('http, falses://github.com/CrisRonda',Icon(Icons.android,size: widthScreen*0.05, color: Colors.white,),Colors.black),
-              spacerWidth(widthScreen, false),
-              materialButtonCircular('https://www.instagram.com/cristian.ronda1/?hl=es-la',Icon(Icons.camera_roll,size: widthScreen*0.05, color: Colors.white,),Colors.purple),
-              spacerWidth(widthScreen, false),
-              materialButtonCircular('https, false://twitter.com/CristianRonda3',Icon(Icons.new_releases,size: widthScreen*0.05, color: Colors.white,),Colors.blueGrey),
-              spacerWidth(widthScreen, false),
-              materialButtonCircular('https://www.linkedin.com/in/cristian-ronda-169414180/',Icon(Icons.bookmark_border,size: widthScreen*0.05, color: Colors.white,),Colors.cyanAccent),
-              spacerWidth(widthScreen, false),
-            ],
-          )
+          ResponsiveLayout.isSmallScreen(context)
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    materialButtonCircular(
+                        'https://www.facebook.com/cristian.ronda2',
+                        "assets/fb.png"),
+                    spacerWidth(widthScreen, true),
+                    materialButtonCircular(
+                        'https://github.com/CrisRonda', "assets/gh.jpg"),
+                    spacerWidth(widthScreen, true),
+                    materialButtonCircular(
+                        'https://www.instagram.com/cristian.ronda1/?hl=es-la',
+                        "asssets/ins.png"),
+                    spacerWidth(widthScreen, true),
+                    materialButtonCircular(
+                        'https://twitter.com/CristianRonda3', "assets/tw.png"),
+                    spacerWidth(widthScreen, true),
+                    materialButtonCircular(
+                        'https://www.linkedin.com/in/cristian-ronda-169414180/',
+                        "assets/in.png"),
+                    spacerWidth(widthScreen, true),
+                  ],
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    materialButtonCircular(
+                        'https://www.facebook.com/cristian.ronda2',
+                        "assets/fb.png"),
+                    spacerWidth(widthScreen, false),
+                    materialButtonCircular(
+                        'https://github.com/CrisRonda', "assets/gh.jpg"),
+                    spacerWidth(widthScreen, false),
+                    materialButtonCircular(
+                        'https://www.instagram.com/cristian.ronda1/?hl=es-la',
+                        "assets/ins.png"),
+                    spacerWidth(widthScreen, false),
+                    materialButtonCircular(
+                        'https://twitter.com/CristianRonda3', "assets/tw.png"),
+                    spacerWidth(widthScreen, false),
+                    materialButtonCircular(
+                        'https://www.linkedin.com/in/cristian-ronda-169414180/',
+                        "assets/in.png"),
+                    spacerWidth(widthScreen, false),
+                  ],
+                )
         ],
       ),
     );
   }
 
-  SizedBox spacerWidth(double widthScreen, bool column ) => column ?SizedBox(width: widthScreen*0.1,):SizedBox(width: 10,) ;
+  SizedBox spacerWidth(double widthScreen, bool column) => column
+      ? SizedBox(
+          width: widthScreen * 0.1,
+        )
+      : SizedBox(
+          width: 10,
+        );
 
-  RawMaterialButton materialButtonCircular( String link, Icon iconUser, Color color) {
+  RawMaterialButton materialButtonCircular(String link, String urlImage) {
     return new RawMaterialButton(
-              onPressed: () {js.context.callMethod("open",[link]);},
-              child: iconUser,
-              shape: new CircleBorder(),
-              elevation: 2.0,
-              fillColor: color,
-              padding: const EdgeInsets.all(15.0),
-            );
+      onPressed: () {
+        js.context.callMethod("open", [link]);
+      },
+      child: Container(
+          width: 150,
+          height: 150,
+          child: ClipOval(child: Image.network(urlImage, fit: BoxFit.cover))),
+      shape: new CircleBorder(),
+      elevation: 2.0,
+      padding: const EdgeInsets.all(15.0),
+    );
   }
 
   SizedBox spacer(double number) {

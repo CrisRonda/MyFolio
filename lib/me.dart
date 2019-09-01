@@ -47,7 +47,7 @@ class Me extends StatelessWidget {
           spacer(12),
           textNormal(resumen2),
           separator,
-          textTitle("RESUME"),
+          textTitle("UN POCO MÁS DE MÍ"),
           spacer(25),
           textNormal(soy1),
           separator,
@@ -72,7 +72,7 @@ class Me extends StatelessWidget {
                     spacerWidth(widthScreen, true),
                     materialButtonCircular(
                         'https://www.instagram.com/cristian.ronda1/?hl=es-la',
-                        "asssets/ins.png"),
+                        "assets/ins.png"),
                     spacerWidth(widthScreen, true),
                     materialButtonCircular(
                         'https://twitter.com/CristianRonda3', "assets/tw.png"),

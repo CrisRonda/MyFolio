@@ -23,17 +23,42 @@ class Studies extends StatelessWidget {
             children: <Widget>[
               textTitle("EDUCACION"),
               rowDescription(
-                widthScreen,
-                "Bachiller Físico-Matemático, Instituto Tecnológico Benito Juárez",
-                "2006-2012",
-                "",
-              ),
+                  widthScreen,
+                  "Bachiller Físico-Matemático, Instituto Tecnológico Benito Juárez..",
+                  "2006-2012",
+                  ""),
               separator,
               rowDescription(
                   widthScreen,
                   "Ingeniería Electrónica y Redes de Información, Escuela Politécnica Nacional",
                   "2012-2019",
                   "data:image/png;base64,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"),
+              SizedBox(
+                height: 50,
+              ),
+              separator,
+              textTitle("CONCURSOS"),
+              rowDescription(
+                widthScreen,
+                "Hackathon-CampusConectado 2019 - IEEE/ESPE",
+                "Ecuador - Quito 2019",
+                "https://scontent.fuio16-1.fna.fbcdn.net/v/t1.0-9/65946630_2129265127201693_8266779100870344704_n.jpg?_nc_cat=107&_nc_oc=AQllcNAVYaJNAQ0SRZXRtc_lkd16D-reTXM7QZ-4EWMFsB7dOShvuhItB4gwIA9RF1t16zB7X8sjLhRiQqDMqe_3&_nc_ht=scontent.fuio16-1.fna&oh=e89395d046079196c115a6a920a731b2&oe=5DCE89DA",
+              ),
+              separator,
+              rowDescription(
+                widthScreen,
+                "Primer lugar en NetDevelopers First Edition - Cisco",
+                "Ecuador - Quito 2019",
+                "https://www.epn.edu.ec/wp-content/uploads/2019/04/CONCURSO-CISCO-BANNER-POST.jpg",
+              ),
+              separator,
+              rowDescription(
+                widthScreen,
+                "Segundo lugar en IRON CODER Segunda Edición - EPN",
+                "Ecuador - Quito 2016",
+                "",
+              ),
+              separator,
               SizedBox(
                 height: 50,
               ),
@@ -138,49 +163,43 @@ class Studies extends StatelessWidget {
     );
   }
 
-  Row rowDescription(
+  Column rowDescription(
       double widthScreen, String title, String year, String urlImage) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Column(
-          children: <Widget>[
-            SizedBox(
-              width: widthScreen * 0.2,
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    title,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Viga',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                  ),
-                  Text(
-                    "Quito - Ecuador",
-                    style: TextStyle(
-                        color: Colors.black, fontFamily: 'Viga', fontSize: 18),
-                  ),
-                  Text(
-                    year,
-                    style: TextStyle(
-                        color: Colors.black, fontFamily: 'Viga', fontSize: 12),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
         SizedBox(
-          width: widthScreen * 0.35,
-        ),
-        Container(
-          width: widthScreen * 0.25,
-          height: 150,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(urlImage), fit: BoxFit.scaleDown)),
-        ),
+          width: widthScreen,
+          child: Column(
+            children: <Widget>[
+              Text(
+                title,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Viga',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              Text(
+                "Quito - Ecuador",
+                style: TextStyle(
+                    color: Colors.black, fontFamily: 'Viga', fontSize: 18),
+              ),
+              Text(
+                year,
+                style: TextStyle(
+                    color: Colors.black, fontFamily: 'Viga', fontSize: 12),
+              ),
+              Container(
+                width: widthScreen * 0.25,
+                height: 150,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(urlImage), fit: BoxFit.scaleDown)),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

@@ -43,9 +43,10 @@ class _AboutMeState extends State<AboutMePage> {
                           titleText("Hola!"),
                           titleText('Mi nombre es \nCristian Ronda'),
                           SizedBox(height: 50.0),
-                          phaseText("Siempre buscando"),
-                          phaseText("Siempre resolviendo"),
-                          phaseText("Siempre programando"),
+                          phaseText("Siempre"),
+                          phaseText("buscando,"),
+                          phaseText("resolviendo,"),
+                          phaseText("programando"),
                           SizedBox(height: 50.0),
                           Container(
                             width: 500.0,
@@ -137,10 +138,12 @@ class _AboutMeState extends State<AboutMePage> {
   }
 
   Text phaseText(String text) {
+    double size = 16;
+    ResponsiveLayout.isSmallScreen(context) ? size = 24 : size = 50;
     return Text(
       text,
       style: TextStyle(
-          fontSize: 50.0, fontWeight: FontWeight.w200, fontFamily: 'Viga'),
+          fontSize: size, fontWeight: FontWeight.w200, fontFamily: 'Viga'),
     );
   }
 
